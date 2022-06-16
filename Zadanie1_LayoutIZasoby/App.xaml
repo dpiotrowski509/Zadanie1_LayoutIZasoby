@@ -1,0 +1,58 @@
+﻿<Application x:Class="Zadanie1_LayoutIZasoby.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:Zadanie1_LayoutIZasoby"
+             StartupUri="MainWindow.xaml">
+    <Application.Resources>
+
+            <SolidColorBrush Color="#900" x:Key="labelColor"></SolidColorBrush>
+            <SolidColorBrush Color="#EEE" x:Key="buttonBackgroundColor"></SolidColorBrush>
+            <SolidColorBrush Color="#DDF" x:Key="staticButtonBackgroundColor"></SolidColorBrush>
+            <SolidColorBrush Color="#99D" x:Key="focusButtonBackgroundColor"></SolidColorBrush>
+            <SolidColorBrush Color="#99F" x:Key="clickButtonBackgroundColor"></SolidColorBrush>
+
+
+        <Style TargetType="Label" x:Key="labelStyle">
+            <Setter Property="FontWeight" Value="Bold"/>
+            <Setter Property="FontSize" Value="24"/>
+        </Style>
+        <Style TargetType="Label" 
+               x:Key="secondLabelStyle" 
+               BasedOn="{StaticResource labelStyle}">
+            <Setter Property="Foreground" Value="{StaticResource labelColor}"/>
+        </Style>
+        <Style TargetType="Button" 
+               x:Key="buttonStyle">
+            <Setter Property="Background" Value="{StaticResource buttonBackgroundColor}"/>
+            <Setter Property="FontSize" Value="20"/>
+        </Style>
+
+        <Style TargetType="Button" 
+               x:Key="secondButtonStyle">
+            <Setter Property="FontSize" Value="20"/>
+            <Setter Property="MinWidth" Value="150"/>
+            <Setter Property="MinHeight" Value="50"/>
+            <Setter Property="Background" Value="{StaticResource staticButtonBackgroundColor}"/>
+
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border Background="{TemplateBinding Background}">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+            <Style.Triggers>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter Property="Background" Value="{StaticResource focusButtonBackgroundColor}"/>
+                </Trigger>
+                <Trigger Property="IsPressed" Value="True">
+                    <Setter Property="Background" Value="{StaticResource clickButtonBackgroundColor}"/>
+                </Trigger>
+
+            </Style.Triggers>
+        </Style>
+
+    </Application.Resources>
+</Application>

@@ -1,0 +1,54 @@
+﻿<Window x:Class="Zadanie1_LayoutIZasoby.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Zadanie1_LayoutIZasoby"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="720" Width="1280">
+
+    <Grid>
+        <Grid.RowDefinitions></Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="0.3*"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+
+        <StackPanel>
+            <Label Content="Group 1" Style="{StaticResource ResourceKey=secondLabelStyle}"/>
+            <Button Content="Button1" Style="{StaticResource ResourceKey=buttonStyle}"/>
+            <Button Content="Button2" Style="{StaticResource ResourceKey=buttonStyle}"/>
+            <Button Content="Button3" Style="{StaticResource ResourceKey=buttonStyle}"/>
+            <Label Content="Group 2" Style="{StaticResource ResourceKey=labelStyle}"/>
+            <Button Content="Button1" Style="{StaticResource ResourceKey=buttonStyle}"/>
+            <Button Content="Button2" Style="{StaticResource ResourceKey=buttonStyle}"/>
+            <Button Content="Button3" Style="{StaticResource ResourceKey=buttonStyle}"/>
+            <Label Content="Group 3" Style="{StaticResource ResourceKey=labelStyle}"/>
+            <Button Content="Button1" Style="{StaticResource ResourceKey=buttonStyle}"/>
+            <Button Content="Button2" Style="{StaticResource ResourceKey=buttonStyle}"/>
+            <Button Content="Button3" Style="{StaticResource ResourceKey=buttonStyle}"/>
+        </StackPanel>
+
+        <WrapPanel  Grid.Column="1"
+                    Orientation="Horizontal"
+                    HorizontalAlignment="Center">
+            <Button Content="Button1" Style="{StaticResource ResourceKey=secondButtonStyle}" />
+            <Button Content="Button2" Style="{StaticResource ResourceKey=secondButtonStyle}" />
+            <Button Content="Button3" Style="{StaticResource ResourceKey=secondButtonStyle}" />
+            <Button Content="Button4" Style="{StaticResource ResourceKey=secondButtonStyle}" />
+            <Button Content="Button5" Style="{StaticResource ResourceKey=secondButtonStyle}" />
+            <Button Content="Button6" Style="{StaticResource ResourceKey=secondButtonStyle}" />
+            <Button Content="Button7" Style="{StaticResource ResourceKey=secondButtonStyle}" />
+            <Button Content="Button8" Style="{StaticResource ResourceKey=secondButtonStyle}" />
+            <Button Content="Button9" Style="{StaticResource ResourceKey=secondButtonStyle}" />
+            <Button Content="Button10" Style="{StaticResource ResourceKey=secondButtonStyle}" />
+            <Button Content="Button11" Style="{StaticResource ResourceKey=secondButtonStyle}" />
+            <Button Content="Button12" Style="{StaticResource ResourceKey=secondButtonStyle}" />
+            <Button Content="Button13" Style="{StaticResource ResourceKey=secondButtonStyle}" />
+            <Button Content="Button14" Style="{StaticResource ResourceKey=secondButtonStyle}" />
+            <Button Content="Button15" Style="{StaticResource ResourceKey=secondButtonStyle}" />
+            <Button Content="Button16" Style="{StaticResource ResourceKey=secondButtonStyle}"/>
+
+        </WrapPanel>
+    </Grid>
+</Window>
